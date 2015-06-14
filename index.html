@@ -54,10 +54,14 @@
   <h4><span class="normal">pronounced</span> [ `gossip,erl ]</h4>
   
   <div class="body">
-    <p>The purpose of gossiperl is to provide a gossip as a service for applications running on a&nbsp;host.</p>
-    <p>Gossiperl is written in Erlang. Once a gossiperl daemon is compiled and installed on the host, an application can connect and start exchanging data with other members. This is achieved by applications registering their own overlays. Every overlay can be secured using dedicated symmetric key. Only the member who has access to a given symmetric key, has access to the data exchanged on that overlay. Additionally, every gossip client uses their own secret key to prevent spoofing by other overlay members. Messages between applications can be shared only via gossiperl daemon. The daemon knows the secret keys of every application and will not attempt passing any messages from the application if the key doesn’t match.</p>
-    <p>Every overlay uses its own separate configuration. Such overlays behave as completely separate systems.</p>
-    <p>Gossiperl client applications can publish and subscribe to digest types provided by other applications.</p>
+    <p>Gossiperl is a language agnostic, Apache Thrift based gossip middleware and message bus for data dissemination and replication within global cloud environments. Gossiperl provides gossip protocol as a service. Gossiperl is:</p>
+    <ul>
+      <li>highly scalable: written in Erlang OTP</li>
+      <li>highly secure: all traffic encrypted</li>
+      <li>flexible: no defined communication patterns, applications can form communication in any way desired for the implementation</li>
+      <li>content independent: any kind data can be distributed, Apache Thrift</li>
+      <li>configurable: managed with REST API, run-time reconfiguration</li>
+    </ul>
     <dl>
       <dt><a href="/d/gossip-euc-2015.pdf">Let's talk gossip - slides</a></dt>
       <dd>What is gossip and gossiperl.<br/>Erlang User Conference, 11th of June 2015, Stockholm, Sweden</dd>
